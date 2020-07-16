@@ -83,7 +83,9 @@ const bombNum = 2;
 const canvas = document.getElementById('canvas');
 // 2d对象
 const ctx = canvas.getContext('2d');
-
+/**
+ * 初始化
+ */
 function init() {
   initData();
   // 画背景
@@ -99,6 +101,9 @@ function init() {
   // 画评分
   renderScore();
 }
+/**
+ * 初始化数据
+ */
 function initData() {
   // 初始化分数
   score = 0;
@@ -386,8 +391,6 @@ function getRandom() {
   return { x, y }
 }
 
-init();
-
 /**
  * 绘制排名和评分信息
  */
@@ -406,3 +409,6 @@ function renderScore() {
   ctx.fillText('当前得分', 500, 240);
   ctx.fillText(`${score}`, 580, 300);
 }
+
+
+init();
